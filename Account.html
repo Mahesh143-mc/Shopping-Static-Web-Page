@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redstore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/89a2e46755.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="Pictures/logo.png" alt="#"></a>
+                </div>
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="producet.html">Produces</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="Account.html">Account </a></li>
+                    </ul>
+                </nav>
+                <a href="shoppingcard.html"><img src="Pictures/cart.png" alt="" width="25px" height="25px"></a>
+                <img src="Pictures/menu.png" alt="" class="menu-icon" onclick="menu()">
+            </div>
+        </div>
+
+    <!--account page-->>
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="Pictures/image1.png" width="100%">
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Resgister</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form action="" id="loginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot Password</a>
+                        </form>
+
+                        <form action="" id="regForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="email">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="Pictures/play-store.png" alt="">
+                        <img src="Pictures/app-store.png" alt="">
+                    </div>
+                    
+                </div>
+                
+                <div class="footer-col-2">
+                    <img src="Pictures/logo-white.png" alt="">
+                    <p>Our purpose is to sustainably make the pleasure and benifits of spords accessible to the many.</p>
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>FaceBook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Whatsapp</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024 - Online Productes</p>
+        </div>
+    </div>
+
+    <script>
+        var MenuItems=document.getElementById("menuitems");
+
+        MenuItems.style.maxHeight="0px";
+
+        function menu()
+        {
+            if(MenuItems.style.maxHeight=="0px")
+                {
+                    MenuItems.style.maxHeight="200px";
+                }
+            else
+                {
+                    MenuItems.style.maxHeight="0px";
+                }
+        }
+    </script>
+
+    <script>
+
+        var LoginForm=document.getElementById("loginForm");
+        var RegForm=document.getElementById("regForm");
+        var Indicator=document.getElementById("Indicator");
+
+        function register()
+        {
+            RegForm.style.transform="translateX(0px)";
+            LoginForm.style.transform="translateX(0px)";
+            Indicator.style.transform="translateX(100px)";
+        }
+
+        function login()
+        {
+            RegForm.style.transform="translateX(300px)"
+            LoginForm.style.transform="translateX(300px)"
+            Indicator.style.transform="translateX(0px)";
+        }
+
+    </script>
+</body>
+
+</html>
